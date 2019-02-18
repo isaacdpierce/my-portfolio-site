@@ -1,0 +1,48 @@
+body * {
+  box-sizing: border-box;
+}
+
+.question {
+  width: 100vw;
+  text-align: center;
+  background-size: 50px 200px;
+  border-top: 1px outset rgb(165, 165, 165);
+  border-bottom: 3px solid rgb(75, 75, 75);
+  background: -webkit-repeating-linear-gradient(
+      left,
+      hsla(0, 0%, 100%, 0) 0%,
+      hsla(0, 0%, 100%, 0) 6%,
+      hsla(0, 0%, 100%, 0.1) 7.5%,
+      hsla(0, 0%, 100%, 0) 9%
+    ),
+    -webkit-repeating-linear-gradient(left, hsla(0, 0%, 0%, 0) 0%, hsla(
+            0,
+            0%,
+            0%,
+            0
+          )
+          4%, hsla(0, 0%, 0%, 0.03) 4.5%, hsla(0, 0%, 0%, 0) 6%),
+    -webkit-repeating-linear-gradient(left, hsla(0, 0%, 100%, 0) 0%, hsla(
+            0,
+            0%,
+            100%,
+            0
+          )
+          1.2%, hsla(0, 0%, 100%, 0.15) 2.2%, hsla(0, 0%, 100%, 0) 4%),
+    -webkit-linear-gradient(-90deg, hsl(0, 0%, 78%) 0%, hsl(0, 0%, 90%) 47%, hsl(
+            0,
+            0%,
+            78%
+          )
+          53%, hsl(0, 0%, 70%) 100%);
+}
+
+.question h1 {
+  font: bold 20px arial, sans-serif;
+  background-color: #242424;
+  color: transparent;
+  text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.5);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+}
