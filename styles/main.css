@@ -1,48 +1,184 @@
+html {
+  font-size: 62.5%;
+}
 body * {
+  color: rgb(240, 238, 238);
+  position: relative;
   box-sizing: border-box;
+  font-size: 1.6rem;
+  font-family: 'Fira Sans', sans-serif;
+  letter-spacing: 0.25rem;
+  text-shadow: 1px 1px 1px black;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  text-transform: uppercase;
+}
+
+h1 {
+  letter-spacing: 1rem;
+  font-size: 6rem;
+  font-family: 'Fira Mono', monospace;
+  padding-left: 0.75rem;
+}
+
+h6 {
+  color: rgb(75, 100, 175);
+  text-transform: uppercase;
+}
+
+.header__conduct h3 {
+  font-size: 2.5rem;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+li:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+a {
+  text-decoration: none;
+  color: #996515;
+  font-weight: 100;
+}
+
+main {
+  position: relative;
+}
+
+.main__grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  min-height: 100vh;
+  width: 100vw;
+  grid-gap: 1em;
+}
+
+.main__bg {
+  background: url('../images/rhino.png') no-repeat;
+  background-position: right bottom;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.container__content {
+  grid-column: 2 / span 5;
+  min-width: 350px;
+}
+
+.container__content nav {
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-between;
+  background: #1c1918;
+  width: 100%;
+  position: sticky;
+  top: 90vh;
+  z-index: 99;
+  padding: 1rem 0 10rem 0;
+}
+
+.section__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 65vh;
+  position: relative;
+  /* border: 1px solid peru; */
+}
+
+.flex-center {
+  justify-content: center;
+}
+
+.highlight {
+  display: inline;
+  background-color: grey;
+}
+
+.add-margin-tb-10 {
+  margin: 10vw 0 10vw 0;
+}
+
+.container__logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: 1rem;
+  height: 10rem;
+  background: #1a1817;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+}
+
+.logo__text {
+  font-size: 2rem;
+  font-weight: 100;
+  letter-spacing: 0.5rem;
+}
+
+.list__tools {
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
 }
 
 .question {
-  width: 100vw;
+  width: 100%;
+  padding: 3rem 6rem;
+  border-radius: 3px;
   text-align: center;
-  background-size: 50px 200px;
+
+  background: url('../images/tx-concrete.png') #242424;
+  background-size: cover;
   border-top: 1px outset rgb(165, 165, 165);
-  border-bottom: 3px solid rgb(75, 75, 75);
-  background: -webkit-repeating-linear-gradient(
-      left,
-      hsla(0, 0%, 100%, 0) 0%,
-      hsla(0, 0%, 100%, 0) 6%,
-      hsla(0, 0%, 100%, 0.1) 7.5%,
-      hsla(0, 0%, 100%, 0) 9%
-    ),
-    -webkit-repeating-linear-gradient(left, hsla(0, 0%, 0%, 0) 0%, hsla(
-            0,
-            0%,
-            0%,
-            0
-          )
-          4%, hsla(0, 0%, 0%, 0.03) 4.5%, hsla(0, 0%, 0%, 0) 6%),
-    -webkit-repeating-linear-gradient(left, hsla(0, 0%, 100%, 0) 0%, hsla(
-            0,
-            0%,
-            100%,
-            0
-          )
-          1.2%, hsla(0, 0%, 100%, 0.15) 2.2%, hsla(0, 0%, 100%, 0) 4%),
-    -webkit-linear-gradient(-90deg, hsl(0, 0%, 78%) 0%, hsl(0, 0%, 90%) 47%, hsl(
-            0,
-            0%,
-            78%
-          )
-          53%, hsl(0, 0%, 70%) 100%);
+  border-bottom: 3px solid rgb(41, 41, 41);
 }
 
-.question h1 {
-  font: bold 20px arial, sans-serif;
-  background-color: #242424;
+.question h3 {
+  font-weight: bold;
+  font-size: 2rem;
+  background-color: #181818;
   color: transparent;
-  text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.5);
+  text-shadow: 2px 2px 3px rgba(94, 94, 94, 0.5);
   -webkit-background-clip: text;
   -moz-background-clip: text;
   background-clip: text;
 }
+
+/* background: -webkit-repeating-linear-gradient(
+  left,
+  hsla(0, 0%, 100%, 0) 0%,
+  hsla(0, 0%, 100%, 0) 6%,
+  hsla(0, 0%, 100%, 0.1) 7.5%,
+  hsla(0, 0%, 100%, 0) 9%
+),
+-webkit-repeating-linear-gradient(left, hsla(0, 0%, 0%, 0) 0%, hsla(
+        0,
+        0%,
+        0%,
+        0
+      )
+      4%, hsla(0, 0%, 0%, 0.03) 4.5%, hsla(0, 0%, 0%, 0) 6%),
+-webkit-repeating-linear-gradient(left, hsla(0, 0%, 100%, 0) 0%, hsla(
+        0,
+        0%,
+        100%,
+        0
+      )
+      1.2%, hsla(0, 0%, 100%, 0.15) 2.2%, hsla(0, 0%, 100%, 0) 4%),
+-webkit-linear-gradient(-90deg, hsl(0, 0%, 78%) 0%, hsl(0, 0%, 90%) 47%, hsl(
+        0,
+        0%,
+        78%
+      )
+      53%, hsl(0, 0%, 70%) 100%); */
