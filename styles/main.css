@@ -45,6 +45,7 @@ li:not(:last-child) {
 a {
   text-decoration: none;
   color: #b37519;
+  transition: all 0.2s;
 }
 
 a:hover {
@@ -65,6 +66,7 @@ footer {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  height: 67vh;
 }
 
 figure {
@@ -73,7 +75,6 @@ figure {
 }
 
 figcaption {
-  /* color: rgb(158, 181, 250); */
   padding: 2rem 0;
   text-align: center;
 }
@@ -178,6 +179,7 @@ cite {
 
 .question-bg {
   background: rgb(49, 49, 49);
+  border-radius: 5px;
   height: 100%;
   width: 100%;
 }
@@ -189,12 +191,8 @@ cite {
   text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.233);
 }
 
-.contact-info {
+.contact__info {
   text-align: center;
-}
-
-.contact__message {
-  padding: 0;
 }
 
 .contact__message ul {
@@ -202,12 +200,26 @@ cite {
 }
 
 .copyright {
-  color: grey;
+  color: #413834;
+  position: relative;
+  bottom: 0;
 }
 
-.contact__message p {
-  color: rgb(201, 201, 201);
+.contact__message p,
+li > span {
+  color: rgb(0, 0, 0);
+  font-size: 2rem;
+  font-weight: bolder;
   padding: 0 1rem 8.5rem 1rem;
+}
+
+.contact__message a {
+  color: rgb(134, 67, 24);
+  transition: color 0.2s;
+}
+
+.contact__message a:hover {
+  color: rgb(173, 86, 32);
 }
 
 .portfolio {
@@ -224,15 +236,16 @@ cite {
 
 .portfolio__linkbox a {
   padding: 5px 7px;
-  border: 1px solid rgb(109, 55, 41);
+  border: 1px solid rgb(134, 67, 24);
   border-radius: 2px;
   font-size: 2rem;
-  color: rgb(109, 55, 41);
+  color: rgb(134, 67, 24);
+  transition: all 0.3s;
 }
 
 .portfolio__linkbox a:hover {
-  color: rgb(161, 81, 61);
-  border: 1px solid rgb(161, 81, 61);
+  color: rgb(173, 86, 32);
+  box-shadow: inset 0px 0px 15px rgba(155, 77, 28, 0.281);
 }
 
 .slider__image {
@@ -279,6 +292,10 @@ cite {
     text-shadow: 2px 2px 3px black;
     letter-spacing: 0.15rem;
     font-size: 1.5rem;
+  }
+
+  footer {
+    height: 75vh;
   }
 
   h1 {
