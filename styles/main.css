@@ -28,7 +28,9 @@ h1 {
 }
 
 h6 {
-  color: rgb(75, 100, 175);
+  color: #5d8391
+
+;
   text-transform: uppercase;
   font-weight: bold;
 }
@@ -45,6 +47,7 @@ li:not(:last-child) {
 a {
   text-decoration: none;
   color: #b37519;
+  font-weight: 200;
   transition: all 0.2s;
 }
 
@@ -59,19 +62,6 @@ p {
 
 main {
   position: relative;
-}
-
-footer {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  height: 67vh;
-}
-
-figure {
-  padding-right: 8rem;
-  border-right: 10px groove rgb(156, 155, 155);
 }
 
 figcaption {
@@ -99,47 +89,90 @@ cite {
 
 .container__content {
   grid-column: 2 / span 5;
+  grid-row: 1 / -1;
 }
 
-.menu {
-  background: #1c1918;
-  min-width: 390px;
+.copyright {
+  color: #413834;
+  padding: 2rem;
+}
+
+.contact p {
+  color: rgb(0, 0, 0);
+  font-size: 1.8rem;
+  font-weight: bolder;
+  text-shadow: none;
+  padding: .5rem;
+}
+
+.contact a {
+  font-size: 1.8rem;
+  color: rgb(134, 67, 24);
+  transition: color 0.2s;
+}
+
+.contact a:hover {
+  color: rgb(173, 86, 32);
+}
+
+p.contact__tag {
+  font-size: 1.6rem;
+  font-weight: 100;
+  color: #d3d3d3ce;
+}
+
+footer {
+  grid-column: 2 / span 5;
+  grid-row: 1 / -1;
+
+  background: #1D1A19;
   height: 81vh;
   position: sticky;
-  top: 93vh;
+  top: 94vh;
   z-index: 99;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
 }
 
 .list-flex {
+  width: 568px;
+  max-width: 95vw;
   display: flex;
   justify-content: space-between;
-  padding-top: 1rem;
+  margin: .8rem 0;
 }
 
 .list-flex li {
   display: flex;
   flex-direction: column;
-  text-transform: uppercase;
   align-items: center;
   text-align: center;
   color: rgb(190, 190, 190);
+  text-transform: uppercase;
+}
+
+.list-flex a {
+  font-weight: 100;
 }
 
 .section__content {
   position: relative;
   padding: 10rem 0;
-  /* border: 1px solid peru; */
-  min-width: 390px;
-}
-
-.container__text {
-  transform: translateY(-3%);
 }
 
 .section__content--last {
   padding-top: 10rem;
   margin-bottom: 50rem;
 }
+
+.container__text {
+  transform: translateY(3%);
+}
+
 .container__logo {
   display: flex;
   flex-direction: column;
@@ -147,7 +180,6 @@ cite {
   padding-bottom: 1rem;
   margin-top: 36vh;
   height: 19vh;
-  min-width: 390px;
   background: #1a1817;
   position: sticky;
   top: -1px;
@@ -191,50 +223,28 @@ cite {
   text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.233);
 }
 
-.contact__info {
-  text-align: center;
-}
-
-.contact__message ul {
-  text-transform: lowercase;
-}
-
-.copyright {
-  color: #413834;
-  position: relative;
-  bottom: 0;
-}
-
-.contact__message p,
-li > span {
-  color: rgb(0, 0, 0);
-  font-size: 2rem;
-  font-weight: bolder;
-  padding: 0 1rem 8.5rem 1rem;
-}
-
-.contact__message a {
-  color: rgb(134, 67, 24);
-  transition: color 0.2s;
-}
-
-.contact__message a:hover {
-  color: rgb(173, 86, 32);
-}
-
-.portfolio {
+.slider {
   display: flex;
   overflow: scroll;
 }
 
-.portfolio__linkbox {
+.slide:not(:last-child) {
+  padding-right: 8rem;
+  border-right: 10px groove rgb(156, 155, 155);
+}
+
+.slide__image {
+  width: 500px;
+}
+
+.slide__linkbox {
   padding-bottom: 1rem;
   display: flex;
   justify-content: space-between;
   text-transform: uppercase;
 }
 
-.portfolio__linkbox a {
+.slide__linkbox a {
   padding: 5px 7px;
   border: 1px solid rgb(134, 67, 24);
   border-radius: 2px;
@@ -243,13 +253,9 @@ li > span {
   transition: all 0.3s;
 }
 
-.portfolio__linkbox a:hover {
+.slide__linkbox a:hover {
   color: rgb(173, 86, 32);
   box-shadow: inset 0px 0px 15px rgba(155, 77, 28, 0.281);
-}
-
-.slider__image {
-  width: 500px;
 }
 
 .icon--tech {
@@ -281,10 +287,12 @@ li > span {
 /*\\\\\\\\\\\\\\ media queries \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 /* ///////////////////////////////////////////////////////////////////*/
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1100px) {
   .logo h1 {
     font-size: 1.8rem;
   }
+  .container__content {
+    grid-column: 2 / span 6;
 }
 
 @media only screen and (max-width: 900px) {
@@ -292,10 +300,6 @@ li > span {
     text-shadow: 2px 2px 3px black;
     letter-spacing: 0.15rem;
     font-size: 1.5rem;
-  }
-
-  footer {
-    height: 75vh;
   }
 
   h1 {
@@ -320,11 +324,11 @@ li > span {
     font-size: 5rem;
   }
 
-  .menu {
+  footer {
     width: 100%;
     height: 88vh;
     padding: 0 1.5rem;
-  }
+  } 
 
   .darken-bg {
     background-color: rgba(0, 0, 0, 0.411);
