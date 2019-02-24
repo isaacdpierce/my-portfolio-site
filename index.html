@@ -21,63 +21,118 @@
   <body>
     <main class="main__bg main__grid">
       <section class="container__content">
-        <section class="container__logo adjust-left-on-small">
+        <section class="container__logo">
           <div class="logo">
-            <h1 class="logo__text">
+            <h1>
               Isaac Pierce | Web Developer
             </h1>
           </div>
         </section>
 
-        <nav class="menu adjust-left-on-small">
+        <nav class="menu">
           <ul class="list-flex">
-            <li><a href="#">bio</a></li>
-            <li><a href="#">portfolio</a></li>
-            <li><a href="#">tools</a></li>
-            <li><a href="#">conduct</a></li>
-            <li><a href="#">contact</a></li>
+            <li><a href="#bio">bio</a></li>
+            <li><a href="#portfolio">portfolio</a></li>
+            <li><a href="#tools">tools</a></li>
+            <li><a href="#conduct">conduct</a></li>
+            <li><a href="#contact">contact</a></li>
           </ul>
-          <section class="contact-info">
-            <ul>
-              <li><span>email:</span><a href="#"> hello@isaacpierce.io</a></li>
-              <li><span>phone:</span><a href="#"> 555-555-555</a></li>
-            </ul>
+          <footer class="contact-info">
             <div class="contact__message">
               <p>
                 Thanks for checking out my site! <br />Contact me anytime
-                through email or find out more about me by connecting on Twitter
-                or LinkedIn.
+                through email or find out more about me by visiting my
+                <a
+                  href="https://github.com/isaacdpierce"
+                  target="_blank"
+                  title="Go to my Github overview"
+                  >Github page</a
+                >
+                or having a peek at my
+                <a
+                  href="https://twitter.com/isaacdpierce"
+                  target="_blank"
+                  title="Go to my Twitter profile"
+                  >Twitter</a
+                >
+                and
+                <a
+                  href="https://www.linkedin.com/in/isaac-pierce-28ba41171/"
+                  target="_blank"
+                  title="Go to my LinkedIn profile"
+                  >LinkedIn</a
+                >
+                profiles.
               </p>
-              <p></p>
+              <a href="https://github.com/isaacdpierce" target="_blank"
+                ><img
+                  class="icon--social"
+                  src="images/icons/github.svg"
+                  alt="Twitter icon"
+              /></a>
+              <a href="https://twitter.com/isaacdpierce" target="_blank"
+                ><img
+                  class="icon--social"
+                  src="images/icons/twitter.svg"
+                  alt="Twitter icon"
+              /></a>
+              <a
+                href="https://www.linkedin.com/in/isaac-pierce-28ba41171/"
+                target="_blank"
+                ><img
+                  class="icon--social"
+                  src="images/icons/linkedin.svg"
+                  alt="LinkedIn icon"
+              /></a>
+
+              <ul>
+                <li>
+                  <span>email:</span
+                  ><a href="mailto:hello@isaacpierce.io">
+                    hello@isaacpierce.io</a
+                  >
+                </li>
+              </ul>
             </div>
-            <p>
+            <p class="copyright">
               Copyright &copy;2019 Built by Isaac Pierce
             </p>
-          </section>
+          </footer>
         </nav>
 
         <section class="container__text">
-          <section>
+          <section class="section__content">
             <div>
               <h1>builds</h1>
               <h1 class="highlight">tough</h1>
               <h1>code.</h1>
             </div>
           </section>
-
-          <section class="section__content section__content--start">
-            <h6>Elevator speech</h6>
+          <section id="bio" class="section__content darken-bg">
+            <h6>In a nutshell</h6>
             <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime
-              et accusantium eum itaque numquam, ipsa officia fuga iure ipsam,
-              esse necessitatibus. Maxime nam ipsam numquam eius, explicabo vel
-              doloribus cum.
+              I get an obnoxious amount of joy from making something appear on a
+              computer screen. The power to create useful and beautiful things
+              is beyond rewarding. I've been making such things on the internet
+              since 2008.
+            </p>
+            <p>
+              <a href="#contact">Work with me!</a>
+            </p>
+
+            <p>
+              Because I'm passionate, punctual, patient and professional (that's
+              a lot of p's). I love coding and improving my programming skills.
+              I govern a genuine desire to understand people and their needs.
+              And because being of service to others makes me the happiest.
+            </p>
+            <p>
+              I also harbour a robust sense of humour and a love for
+              snowboarding.
             </p>
           </section>
 
-          <section
-            class="section__content section__content--start add-margin-b-10"
-          >
+          <section class="section__content">
             <div>
               <h1 class="highlight">Lives</h1>
               <h1>by</h1>
@@ -86,7 +141,10 @@
             </div>
           </section>
 
-          <section class="section__content header__conduct add-margin-b-10">
+          <section
+            id="conduct"
+            class="section__content header__conduct darken-bg"
+          >
             <h3>Code of conduct</h3>
             <h6>In person and in code</h6>
             <div>
@@ -132,14 +190,46 @@
             </div>
           </section>
 
-          <section class="section__content">
+          <section id="tools" class="section__content darken-bg">
             <h6>The tools of choice</h6>
             <ul class="list-flex">
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>Javascript</li>
-              <li>React</li>
-              <li>Node</li>
+              <li>
+                <img
+                  class="icon--tech"
+                  src="images/icons/html5.svg"
+                  alt="Javascript"
+                />HTML
+              </li>
+              <li>
+                <img
+                  class="icon--tech"
+                  src="images/icons/csswizardry.svg"
+                  alt="Javascript"
+                />CSS
+              </li>
+              <li>
+                <img
+                  class="icon--tech"
+                  src="images/icons/javascript.svg"
+                  alt="Javascript"
+                />Javascript
+              </li>
+              <li>
+                <img
+                  class="icon--tech"
+                  src="images/icons/react.svg"
+                  alt="React"
+                />
+                React
+              </li>
+              <li>
+                <img
+                  class="icon--tech"
+                  src="images/icons/node-dot-js.svg"
+                  alt="Node"
+                />
+                Node
+              </li>
             </ul>
           </section>
 
@@ -151,26 +241,54 @@
             </div>
           </section>
 
-          <section class="section__content">
+          <section class="section__content darken-bg">
             <h6>Honing these new tools right now</h6>
             <ul class="list-flex">
-              <li>Gatsby</li>
-              <li>GraphQl</li>
-              <li>Apollo</li>
-              <li>Meteor</li>
-              <li>Next</li>
+              <li>
+                <img
+                  class="icon--tech"
+                  src="images/icons/gatsby.svg"
+                  alt="Javascript"
+                />Gatsby
+              </li>
+              <li>
+                <img
+                  class="icon--tech"
+                  src="images/icons/graphql.svg"
+                  alt="Javascript"
+                />GraphQl
+              </li>
+              <li>
+                <img
+                  class="icon--tech"
+                  src="images/icons/meteor.svg"
+                  alt="Javascript"
+                />Meteor
+              </li>
+              <li>
+                <img
+                  class="icon--tech"
+                  src="images/icons/mongodb.svg"
+                  alt="Javascript"
+                />MongoDB
+              </li>
             </ul>
           </section>
 
           <section class="section__content">
-            <div class="question">
-              <h3>What kind of person do you want to work with?</h3>
+            <div class="question-bg">
+              <div class="question">
+                <h3>What kind of person do you want to work with?</h3>
+              </div>
             </div>
           </section>
 
-          <section class="section__content">
+          <section class="section__content darken-bg">
             <h6>Things I know about myself</h6>
             <ul>
+              <li>
+                I love my work! I spend 10 - 12 hours a day in work mode.
+              </li>
               <li>
                 I get more satisfaction from helping others to succeed than I do
                 with my own success
@@ -183,25 +301,28 @@
           </section>
 
           <section class="section__content">
-            <div class="question">
-              <h3>
-                How will the person you hire now be contributing to the success
-                of your company in 5 years from now?
-              </h3>
+            <div class="question-bg">
+              <div class="question">
+                <h3>
+                  How will the person you hire now be contributing to the
+                  success of your company in 5 years from now?
+                </h3>
+              </div>
             </div>
           </section>
 
-          <section class="section__content add-margin-tb-10">
+          <section class="section__content darken-bg">
+            <h6>In 5 years from now</h6>
             <p>
-              In 5 years from now I work with an inspiring team that has a
-              strong and supportive work ethic. They bring out the best out in
-              me. And I, inturn, nurture the best in them. We work on exciting
-              projects that push our skills to the next level. We learn together
-              and teach each other.
+              I work with an inspiring team that has a strong and supportive
+              work ethic. They bring out the best out in me. And I, inturn,
+              nurture the best in them. We work on exciting projects that push
+              our skills to the next level. We learn together and teach each
+              other.
             </p>
             <p>
-              I see myself in a senior position. Helping and training others.
-              Working close with my managers to achieve successful outcomes. I'm
+              I'm in a senior position. Helping and training others. Working
+              close with my managers to achieve successful outcomes. I'm
               constantly learning new skills and implementing new tools.
               Attending conferences and workshops to keep sharp and stay
               relevant. Sharing my knowledge with everyone on the team.
@@ -214,23 +335,92 @@
             </p>
           </section>
 
+          <section id="portfolio" class="section__content ">
+            <h6>
+              I made these &rArr;
+            </h6>
+            <div class="portfolio">
+              <div class="slider">
+                <figure>
+                  <cite>SVG Quiz App</cite>
+                  <a
+                    href="https://isaacdpierce.github.io/svg-quiz-app/"
+                    target="_blank"
+                    ><img
+                      class="slider__image"
+                      src="/images/svg-app.png"
+                      alt="My SVG Quiz App"
+                  /></a>
+                  <figcaption>
+                    An accessible and semantic quiz SPA.
+                    <br />
+                    <hr />
+                    HTML + CSS + jQuery
+                  </figcaption>
+                  <div class="portfolio__linkbox">
+                    <a
+                      href="https://isaacdpierce.github.io/svg-quiz-app/"
+                      target="_blank"
+                      >Live</a
+                    ><a
+                      href="https://github.com/isaacdpierce/svg-quiz-app"
+                      target="_blank"
+                      >Github</a
+                    >
+                  </div>
+                </figure>
+              </div>
+              <div class="slider">
+                <figure>
+                  <cite>Animated Event Countdown App</cite>
+                  <a href="http://endurable-protest.surge.sh/" target="_blank"
+                    ><img
+                      class="slider__image"
+                      src="/images/event_app.png"
+                      alt="My Event App"
+                  /></a>
+                  <figcaption>
+                    An event countdown SPA with animations.
+                    <br />
+                    <hr />
+                    Create-react-app + React + JSX + react-slick and
+                    react-scroll animation libraries.
+                  </figcaption>
+                  <div class="portfolio__linkbox">
+                    <a href="http://endurable-protest.surge.sh/" target="_blank"
+                      >Live</a
+                    ><a href="https://github.com/isaacdpierce/event_app"
+                      >Github</a
+                    >
+                  </div>
+                </figure>
+              </div>
+            </div>
+          </section>
+
           <section class="section__content section__content--last">
             <h6>Other things I love almost as much as coding</h6>
             <p>Silence</p>
             <p>
-              <a href="http://digg.com/video/pow-101-snowboarding-deep-powder"
+              <a
+                href="http://digg.com/video/pow-101-snowboarding-deep-powder"
+                target="_blank"
                 >Snowboarding through a forest on fresh powder
               </a>
             </p>
             <p>
               A long drive in the fall while listening to
-              <a href="https://www.youtube.com/watch?v=jrTMMG0zJyI&t=60s"
+              <a
+                href="https://www.youtube.com/watch?v=jrTMMG0zJyI&t=60s"
+                target="_blank"
                 >Samurai lo-fi instrumental hip hop</a
               >
             </p>
             <p>
               Listening to
-              <a href="https://www.youtube.com/watch?v=gw9fKuymA0I&t=7s"
+              <a
+                href="https://www.youtube.com/watch?v=gw9fKuymA0I&t=7s"
+                target="_blank"
                 >Shigeru Umbayeshi</a
               >
               on a rainy day with a cup of dark roast and a splash of Irish
@@ -238,18 +428,24 @@
             </p>
             <p>
               Playing a beautiful
-              <a href="https://www.youtube.com/watch?v=biPr3V7-IXI"
+              <a
+                href="https://www.youtube.com/watch?v=biPr3V7-IXI"
+                target="_blank"
                 >indie puzzle-platform video</a
               >
               game with my sweetie.
             </p>
             <p>
               The idea of getting great at
-              <a href="https://www.youtube.com/watch?v=nd40lIYtQmA"
+              <a
+                href="https://www.youtube.com/watch?v=nd40lIYtQmA"
+                target="_blank"
                 >ping pong</a
               >
             </p>
           </section>
+          <!--! This is only an anchor to get the contact menu to fully open at the bottom of the page -->
+          <p id="contact"></p>
         </section>
       </section>
     </main>

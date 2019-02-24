@@ -1,8 +1,9 @@
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 body * {
-  color: rgb(240, 238, 238);
+  color: #d3d3d3;
   position: relative;
   box-sizing: border-box;
   font-size: 1.6rem;
@@ -45,24 +46,47 @@ a {
   text-decoration: none;
   color: #b37519;
 }
+
 a:hover {
   color: #df9220;
 }
 
 p {
   line-height: 120%;
-  max-width: 32em;
+  max-width: 50rem;
 }
 
 main {
   position: relative;
 }
 
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+figure {
+  padding-right: 8rem;
+  border-right: 10px groove rgb(156, 155, 155);
+}
+
+figcaption {
+  /* color: rgb(158, 181, 250); */
+  padding: 2rem 0;
+  text-align: center;
+}
+
+cite {
+  display: inline-block;
+  padding: 1rem 0;
+  text-transform: uppercase;
+}
+
 .main__grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  width: 100vw;
-  grid-gap: 1em;
 }
 
 .main__bg {
@@ -74,12 +98,12 @@ main {
 
 .container__content {
   grid-column: 2 / span 5;
-  /* min-width: 390px; */
 }
 
 .menu {
   background: #1c1918;
-  width: 100%;
+  min-width: 390px;
+  height: 81vh;
   position: sticky;
   top: 93vh;
   z-index: 99;
@@ -92,19 +116,19 @@ main {
 }
 
 .list-flex li {
-  text-transform: uppercase;
-}
-
-.list-flex li:not(:first-child) {
-  padding-left: 1rem;
-}
-.section__content {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  min-height: 69vh;
+  text-transform: uppercase;
+  align-items: center;
+  text-align: center;
+  color: rgb(190, 190, 190);
+}
+
+.section__content {
   position: relative;
-  border: 1px solid peru;
+  padding: 10rem 0;
+  /* border: 1px solid peru; */
+  min-width: 390px;
 }
 
 .container__text {
@@ -113,40 +137,38 @@ main {
 
 .section__content--last {
   padding-top: 10rem;
-  margin-bottom: 90rem;
+  margin-bottom: 50rem;
 }
 .container__logo {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   padding-bottom: 1rem;
-  margin-top: 39vh;
-  height: 10rem;
-  min-width: 450px;
+  margin-top: 36vh;
+  height: 19vh;
+  min-width: 390px;
   background: #1a1817;
   position: sticky;
-  top: 0;
+  top: -1px;
   z-index: 99;
 }
 
 .logo h1 {
   padding-left: 0;
-}
-
-.logo__text {
   font-family: 'Fira Sans', sans-serif;
   font-size: 2rem;
   letter-spacing: 0.5rem;
 }
 
 .header__conduct h3 {
+  padding-top: 3rem;
   font-size: 2.5rem;
 }
 
 .question {
   width: 100%;
   padding: 5rem 6rem;
-  border-radius: 3px;
+  border-radius: 5px;
   text-align: center;
   background: url('../images/redox-01.png');
   background-size: cover;
@@ -154,36 +176,81 @@ main {
   border-bottom: 3px solid rgb(41, 41, 41);
 }
 
-.question h3 {
-  font-weight: bold;
-  font-size: 2rem;
-  background-color: #575757;
-  color: transparent;
-  text-shadow: 1px 1px 1px rgba(15, 15, 15, 0.938);
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  background-clip: text;
+.question-bg {
+  background: rgb(49, 49, 49);
+  height: 100%;
+  width: 100%;
 }
 
-.contact-info p,
-.contact__message p {
+.question h3 {
+  font-weight: bold;
+  font-size: 2.5rem;
+  color: rgba(0, 0, 0, 0.74);
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.233);
+}
+
+.contact-info {
   text-align: center;
 }
 
-.contact-info ul {
-  padding: 2rem 0;
-  margin-bottom: 10rem;
+.contact__message {
+  padding: 0;
+}
+
+.contact__message ul {
   text-transform: lowercase;
 }
 
-.contact-info p {
+.copyright {
   color: grey;
-  padding-bottom: 3rem;
 }
 
 .contact__message p {
-  color: rgb(75, 100, 175);
-  padding-bottom: 8.5rem;
+  color: rgb(201, 201, 201);
+  padding: 0 1rem 8.5rem 1rem;
+}
+
+.portfolio {
+  display: flex;
+  overflow: scroll;
+}
+
+.portfolio__linkbox {
+  padding-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+}
+
+.portfolio__linkbox a {
+  padding: 5px 7px;
+  border: 1px solid rgb(109, 55, 41);
+  border-radius: 2px;
+  font-size: 2rem;
+  color: rgb(109, 55, 41);
+}
+
+.portfolio__linkbox a:hover {
+  color: rgb(161, 81, 61);
+  border: 1px solid rgb(161, 81, 61);
+}
+
+.slider__image {
+  width: 500px;
+}
+
+.icon--tech {
+  height: 6rem;
+  width: 6rem;
+  background: radial-gradient(rgb(255, 255, 255), transparent);
+  margin-bottom: 2rem;
+  padding: 0.75rem;
+  border-radius: 3px;
+}
+
+.icon--social {
+  height: 3rem;
+  width: 3rem;
 }
 
 /* /////////////////////////////////////////////////////////////////////
@@ -194,19 +261,18 @@ main {
   display: inline;
   background-color: rgba(104, 104, 104, 0.781);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.527);
-}
-
-.add-margin-b-10 {
-  margin-bottom: 10rem;
-}
-
-.section__content--flexstart {
-  justify-content: flex-start;
+  border-radius: 2px;
 }
 
 /* /////////////////////////////////////////////////////////////////////
 /*\\\\\\\\\\\\\\ media queries \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 /* ///////////////////////////////////////////////////////////////////*/
+
+@media only screen and (max-width: 1200px) {
+  .logo h1 {
+    font-size: 1.8rem;
+  }
+}
 
 @media only screen and (max-width: 900px) {
   body * {
@@ -214,42 +280,46 @@ main {
     letter-spacing: 0.15rem;
     font-size: 1.5rem;
   }
+
+  h1 {
+    padding-right: 0.75rem;
+  }
+
   .container__content {
     grid-column: 1 / 13;
     background-color: rgba(0, 0, 0, 0.555);
-    padding: 0 1rem 0 1rem;
   }
 
   .section__content {
-    min-height: 55vh;
-    max-width: 75%;
+    padding: 7.2rem 1.5rem;
   }
 
-  .list-flex {
-    max-width: 75%;
+  .container__logo {
+    padding-left: 1.5rem;
+    height: 12vh;
   }
 
   h1 {
     font-size: 5rem;
   }
-  .container__logo {
-    width: 105%;
-  }
 
   .menu {
-    width: 105%;
-    padding: 0 5rem 0 5rem;
+    width: 100%;
+    height: 88vh;
+    padding: 0 1.5rem;
   }
 
-  .adjust-left-on-small {
-    transform: translateX(-1rem);
-    padding-left: 1rem;
-    padding-right: 2.5rem;
+  .darken-bg {
+    background-color: rgba(0, 0, 0, 0.411);
   }
 }
 
 @media only screen and (max-width: 600px) {
-  .list-flex {
-    min-width: 100%;
+  .logo h1 {
+    font-size: 1.7rem;
+  }
+
+  .section__content {
+    width: 100%;
   }
 }
