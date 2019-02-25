@@ -2,6 +2,9 @@
 /*\\\\\\\\\\\\\\ HTML top level styles \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 /* ///////////////////////////////////////////////////////////////////*/
 
+/* font-family: 'Fira Sans', sans-serif;
+font-family: 'Fira Mono', monospace; */
+
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
@@ -25,9 +28,13 @@ h3 {
 
 h1 {
   letter-spacing: 1rem;
-  font-size: 6rem;
-  font-family: 'Fira Mono', monospace;
   padding-left: 0.75rem;
+}
+
+h2 {
+  font-size: 6rem;
+  letter-spacing: 1rem;
+  font-family: 'Fira Mono', monospace;
 }
 
 h6 {
@@ -84,7 +91,7 @@ nav {
   justify-content: flex-start;
   align-items: center;
   text-align: center;
-  display: none;
+  /* display: none; */
 }
 
 /* /////////////////////////////////////////////////////////////////////
@@ -169,13 +176,13 @@ nav {
   padding: 10rem 0;
 }
 
-/* .section__content:nth-child(2) {
+.section__content:not(:last-child) {
+  transform: translateY(-20rem);
+}
 
-} */
-
-/* .section__content--last {
-  padding-top: 10rem;
-} */
+.section__content:last-of-type {
+  padding-bottom: 60rem;
+}
 
 .conduct h3 {
   padding-top: 3rem;
@@ -358,6 +365,10 @@ p.contact__tag {
     padding: 7.2rem 1.5rem;
   }
 
+  .section__content:last-of-type {
+    padding-bottom: 60rem;
+  }
+
   h1 {
     font-size: 5rem;
   }
@@ -379,14 +390,15 @@ p.contact__tag {
 
 @media only screen and (max-width: 600px) {
   nav {
-    height: 86vh;
+    height: 88.5vh;
   }
+
   .logo h1 {
-    font-size: 1.7rem;
+    font-size: 1.6rem;
   }
 
   .container__logo:before {
-    margin-bottom: -4.8rem;
+    margin-bottom: -2.8rem;
   }
 
   .section__content {
