@@ -1,10 +1,16 @@
+/* /////////////////////////////////////////////////////////////////////
+/*\\\\\\\\\\\\\\ HTML top level styles \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+/* ///////////////////////////////////////////////////////////////////*/
+
+/* font-family: 'Fira Sans', sans-serif;
+font-family: 'Fira Mono', monospace; */
+
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
 }
 body * {
   color: #d3d3d3;
-  position: relative;
   box-sizing: border-box;
   font-size: 1.6rem;
   font-family: 'Fira Sans', sans-serif;
@@ -22,15 +28,17 @@ h3 {
 
 h1 {
   letter-spacing: 1rem;
-  font-size: 6rem;
-  font-family: 'Fira Mono', monospace;
   padding-left: 0.75rem;
 }
 
-h6 {
-  color: #5d8391
+h2 {
+  font-size: 6rem;
+  letter-spacing: 1rem;
+  font-family: 'Fira Mono', monospace;
+}
 
-;
+h6 {
+  color: #5d8391;
   text-transform: uppercase;
   font-weight: bold;
 }
@@ -60,10 +68,6 @@ p {
   max-width: 50rem;
 }
 
-main {
-  position: relative;
-}
-
 figcaption {
   padding: 2rem 0;
   text-align: center;
@@ -74,6 +78,25 @@ cite {
   padding: 1rem 0;
   text-transform: uppercase;
 }
+
+nav {
+  background: #1d1a19;
+  height: 87.5vh;
+  position: sticky;
+  top: 94vh;
+  z-index: 99;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  /* display: none; */
+}
+
+/* /////////////////////////////////////////////////////////////////////
+/*\\\\\\\\\\\\\\ main wrapper \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+/* ///////////////////////////////////////////////////////////////////*/
 
 .main__grid {
   display: grid;
@@ -87,63 +110,52 @@ cite {
   background-size: cover;
 }
 
+/* /////////////////////////////////////////////////////////////////////
+/*\\\\\\\\\\\\\\ logo \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+/* ///////////////////////////////////////////////////////////////////*/
+
+.container__logo {
+  background: url('../images/rhino.png');
+  background-position: right bottom;
+  background-attachment: fixed;
+  background-size: cover;
+
+  padding-bottom: 1rem;
+  position: sticky;
+  top: -45vh;
+  z-index: 99;
+}
+
+.container__logo:before {
+  content: '';
+  display: block;
+  height: 57vh;
+  width: 100%;
+  margin-bottom: -3rem;
+}
+
+.logo h1 {
+  padding-left: 0;
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 2rem;
+  letter-spacing: 0.5rem;
+}
+
+/* /////////////////////////////////////////////////////////////////////
+/*\\\\\\\\\\\\\\ content \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+/* ///////////////////////////////////////////////////////////////////*/
+
 .container__content {
   grid-column: 2 / span 5;
   grid-row: 1 / -1;
 }
 
-.copyright {
-  color: #413834;
-  padding: 2rem;
-}
-
-.contact p {
-  color: rgb(0, 0, 0);
-  font-size: 1.8rem;
-  font-weight: bolder;
-  text-shadow: none;
-  padding: .5rem;
-}
-
-.contact a {
-  font-size: 1.8rem;
-  color: rgb(134, 67, 24);
-  transition: color 0.2s;
-}
-
-.contact a:hover {
-  color: rgb(173, 86, 32);
-}
-
-p.contact__tag {
-  font-size: 1.6rem;
-  font-weight: 100;
-  color: #d3d3d3ce;
-}
-
-footer {
-  grid-column: 2 / span 5;
-  grid-row: 1 / -1;
-
-  background: #1D1A19;
-  height: 81vh;
-  position: sticky;
-  top: 94vh;
-  z-index: 99;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  text-align: center;
-}
-
 .list-flex {
-  width: 568px;
+  width: 100%;
   max-width: 95vw;
   display: flex;
   justify-content: space-between;
-  margin: .8rem 0;
+  margin: 0.8rem 0;
 }
 
 .list-flex li {
@@ -164,39 +176,60 @@ footer {
   padding: 10rem 0;
 }
 
-.section__content--last {
-  padding-top: 10rem;
-  margin-bottom: 50rem;
+.section__content:not(:last-child) {
+  transform: translateY(-20rem);
 }
 
-.container__text {
-  transform: translateY(3%);
+.section__content:last-of-type {
+  padding-bottom: 60rem;
 }
 
-.container__logo {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding-bottom: 1rem;
-  margin-top: 36vh;
-  height: 19vh;
-  background: #1a1817;
-  position: sticky;
-  top: -1px;
-  z-index: 99;
-}
-
-.logo h1 {
-  padding-left: 0;
-  font-family: 'Fira Sans', sans-serif;
-  font-size: 2rem;
-  letter-spacing: 0.5rem;
-}
-
-.header__conduct h3 {
+.conduct h3 {
   padding-top: 3rem;
   font-size: 2.5rem;
 }
+
+/* /////////////////////////////////////////////////////////////////////
+/*\\\\\\\\\\\\\\ footer and contact info\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+/* ///////////////////////////////////////////////////////////////////*/
+
+.contact p {
+  color: rgb(0, 0, 0);
+  font-size: 1.8rem;
+  font-weight: bolder;
+  text-shadow: none;
+  padding: 0.3rem;
+}
+
+.contact {
+  height: 100%;
+}
+
+.contact a {
+  font-size: 1.8rem;
+  color: rgb(134, 67, 24);
+  transition: color 0.2s;
+}
+
+.contact a:hover {
+  color: rgb(173, 86, 32);
+}
+
+p.contact__tag {
+  font-size: 1.6rem;
+  font-weight: 100;
+  color: #d3d3d3ce;
+}
+
+.copyright {
+  justify-self: flex-end;
+  color: #413834;
+  padding: 2rem;
+}
+
+/* /////////////////////////////////////////////////////////////////////
+/*\\\\\\\\\\\\\\ question sections \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+/* ///////////////////////////////////////////////////////////////////*/
 
 .question {
   width: 100%;
@@ -223,14 +256,18 @@ footer {
   text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.233);
 }
 
+/* /////////////////////////////////////////////////////////////////////
+/*\\\\\\\\\\\\\\ slider \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+/* ///////////////////////////////////////////////////////////////////*/
+
 .slider {
   display: flex;
   overflow: scroll;
+  background-color: rgba(0, 0, 0, 0.495);
 }
 
-.slide:not(:last-child) {
-  padding-right: 8rem;
-  border-right: 10px groove rgb(156, 155, 155);
+.slide {
+  padding-right: 4rem;
 }
 
 .slide__image {
@@ -258,6 +295,10 @@ footer {
   box-shadow: inset 0px 0px 15px rgba(155, 77, 28, 0.281);
 }
 
+/* /////////////////////////////////////////////////////////////////////
+/*\\\\\\\\\\\\\\ icons  \\\\\\\\\\\\\\\\\\\\\\\
+/* /////////////////////////////////////////////////////////////////// */
+
 .icon--tech {
   height: 6rem;
   width: 6rem;
@@ -273,8 +314,8 @@ footer {
 }
 
 /* /////////////////////////////////////////////////////////////////////
-/*\\\\\\\\\\\\\\ single purpose formatting rules  \\\\\\\\\\\\\\\\\\\\\\\
-/* /////////////////////////////////////////////////////////////////// */
+/*\\\\\\\\\\\\\\ formatting \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+/* ///////////////////////////////////////////////////////////////////*/
 
 .highlight {
   display: inline;
@@ -293,6 +334,7 @@ footer {
   }
   .container__content {
     grid-column: 2 / span 6;
+  }
 }
 
 @media only screen and (max-width: 900px) {
@@ -306,38 +348,57 @@ footer {
     padding-right: 0.75rem;
   }
 
+  .container__logo:before {
+    background-color: rgba(0, 0, 0, 0.201);
+  }
+
+  .logo {
+    padding-left: 2rem;
+  }
+
   .container__content {
     grid-column: 1 / 13;
-    background-color: rgba(0, 0, 0, 0.555);
+    background-color: rgba(0, 0, 0, 0.201);
   }
 
   .section__content {
     padding: 7.2rem 1.5rem;
   }
 
-  .container__logo {
-    padding-left: 1.5rem;
-    height: 12vh;
+  .section__content:last-of-type {
+    padding-bottom: 60rem;
   }
 
   h1 {
     font-size: 5rem;
   }
 
-  footer {
+  nav {
     width: 100%;
-    height: 88vh;
-    padding: 0 1.5rem;
-  } 
+    height: 89vh;
+    padding: 0 2rem;
+  }
+
+  .slide:last-child {
+    padding-right: 5rem;
+  }
 
   .darken-bg {
-    background-color: rgba(0, 0, 0, 0.411);
+    background-color: rgba(0, 0, 0, 0.201);
   }
 }
 
 @media only screen and (max-width: 600px) {
+  nav {
+    height: 88.5vh;
+  }
+
   .logo h1 {
-    font-size: 1.7rem;
+    font-size: 1.6rem;
+  }
+
+  .container__logo:before {
+    margin-bottom: -2.8rem;
   }
 
   .section__content {
