@@ -81,7 +81,7 @@ cite {
 
 nav {
   background: #1d1a19;
-  height: 87.5vh;
+  height: 91.5vh;
   position: sticky;
   top: 94vh;
   z-index: 99;
@@ -91,7 +91,6 @@ nav {
   justify-content: flex-start;
   align-items: center;
   text-align: center;
-  /* display: none; */
 }
 
 /* /////////////////////////////////////////////////////////////////////
@@ -122,14 +121,14 @@ nav {
 
   padding-bottom: 1rem;
   position: sticky;
-  top: -45vh;
+  top: -43vh;
   z-index: 99;
 }
 
 .container__logo:before {
   content: '';
   display: block;
-  height: 57vh;
+  height: 52vh;
   width: 100%;
   margin-bottom: -3rem;
 }
@@ -190,13 +189,13 @@ nav {
 }
 
 /* /////////////////////////////////////////////////////////////////////
-/*\\\\\\\\\\\\\\ footer and contact info\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+/*\\\\\\\\\\\\\\ nav and contact info\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 /* ///////////////////////////////////////////////////////////////////*/
 
 .contact p {
   color: rgb(0, 0, 0);
   font-size: 1.8rem;
-  font-weight: bolder;
+  font-weight: bold;
   text-shadow: none;
   padding: 0.3rem;
 }
@@ -239,7 +238,8 @@ p.contact__tag {
   background: url('../images/redox-01.png');
   background-size: cover;
   border-top: 1px outset rgb(165, 165, 165);
-  border-bottom: 3px solid rgb(41, 41, 41);
+  border-bottom: 5px solid rgb(45, 45, 45);
+  border-right: 3px solid rgb(45, 45, 45);
 }
 
 .question-bg {
@@ -328,23 +328,28 @@ p.contact__tag {
 /*\\\\\\\\\\\\\\ media queries \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 /* ///////////////////////////////////////////////////////////////////*/
 
-@media only screen and (max-width: 1100px) {
+@media only screen and (max-width: 1300px) {
   .logo h1 {
     font-size: 1.8rem;
   }
   .container__content {
     grid-column: 2 / span 6;
+    min-width: 390px;
   }
 }
 
 @media only screen and (max-width: 900px) {
   body * {
-    text-shadow: 2px 2px 3px black;
+    text-shadow: 2px 2px 12px black;
     letter-spacing: 0.15rem;
     font-size: 1.5rem;
   }
 
-  h1 {
+  h2 {
+    font-size: 6rem;
+  }
+
+  .logo h1 {
     padding-right: 0.75rem;
   }
 
@@ -369,13 +374,8 @@ p.contact__tag {
     padding-bottom: 60rem;
   }
 
-  h1 {
-    font-size: 5rem;
-  }
-
   nav {
     width: 100%;
-    height: 89vh;
     padding: 0 2rem;
   }
 
@@ -390,18 +390,35 @@ p.contact__tag {
 
 @media only screen and (max-width: 600px) {
   nav {
-    height: 88.5vh;
+    height: 91.5vh;
+    background: #171414;
+  }
+
+  .logo {
+    padding-left: 1rem;
   }
 
   .logo h1 {
-    font-size: 1.6rem;
+    color: white;
+    line-height: 110%;
+    letter-spacing: 4px;
   }
 
   .container__logo:before {
-    margin-bottom: -2.8rem;
+    margin-bottom: -2.9rem;
+    background-color: rgba(0, 0, 0, 0.475);
   }
 
   .section__content {
     width: 100%;
+  }
+
+  .container__content {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.475);
+  }
+
+  .darken-bg {
+    background-color: rgba(0, 0, 0, 0.53);
   }
 }
