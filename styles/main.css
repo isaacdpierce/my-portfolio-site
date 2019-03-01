@@ -61,6 +61,10 @@ a:hover {
   color: #df9220;
 }
 
+a:focus {
+  color: #f29f22;
+}
+
 p {
   line-height: 120%;
   max-width: 50rem;
