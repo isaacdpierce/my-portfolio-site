@@ -339,7 +339,7 @@ p.contact__tag {
   }
   .container__content {
     grid-column: 2 / span 6;
-    min-width: 390px;
+    min-width: 350px;
   }
 }
 
@@ -425,5 +425,16 @@ p.contact__tag {
 
   .darken-bg {
     background-color: rgba(0, 0, 0, 0.53);
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .logo h1 {
+    line-height: 115%;
+    letter-spacing: 3px;
+  }
+
+  .container__logo:before {
+    margin-bottom: -3rem;
   }
 }
