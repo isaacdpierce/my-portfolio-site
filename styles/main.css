@@ -36,7 +36,7 @@ h2 {
 }
 
 h6 {
-  color: #5d8391;
+  color: #547682;
   text-transform: uppercase;
   font-weight: bold;
 }
@@ -44,6 +44,7 @@ h6 {
 ul {
   list-style-type: none;
   padding-left: 0;
+  min-width: 330px;
 }
 
 li:not(:last-child) {
@@ -147,7 +148,7 @@ nav {
 /* ///////////////////////////////////////////////////////////////////*/
 
 .container__content {
-  grid-column: 2 / span 5;
+  grid-column: 2 / span 6;
   grid-row: 1 / -1;
 }
 
@@ -191,10 +192,9 @@ nav {
 /* ///////////////////////////////////////////////////////////////////*/
 
 .contact p {
-  color: rgb(0, 0, 0);
+  color: #344a52;
   font-size: 1.8rem;
   font-weight: bold;
-  text-shadow: none;
   padding: 0.3rem;
 }
 
@@ -204,12 +204,6 @@ nav {
 
 .contact a {
   font-size: 1.8rem;
-  color: rgb(134, 67, 24);
-  transition: color 0.2s;
-}
-
-.contact a:hover {
-  color: rgb(173, 86, 32);
 }
 
 p.contact__tag {
@@ -260,18 +254,16 @@ p.contact__tag {
 /*\\\\\\\\\\\\\\ slider \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 /* ///////////////////////////////////////////////////////////////////*/
 
-.slider {
-  display: flex;
-  overflow: scroll;
+.slide {
+  max-width: 550px;
+  margin: 0;
+  margin-bottom: 5rem;
+  padding: 2rem;
   background-color: rgba(0, 0, 0, 0.495);
 }
 
-.slide {
-  padding-right: 4rem;
-}
-
 .slide__image {
-  width: 500px;
+  width: 100%;
 }
 
 .slide__linkbox {
@@ -325,8 +317,8 @@ p.contact__tag {
   padding-left: 1rem;
 }
 
-.pb-60 {
-  padding-bottom: 60rem;
+.section__content--last {
+  margin-bottom: 100vh;
 }
 
 /* /////////////////////////////////////////////////////////////////////
@@ -350,12 +342,23 @@ p.contact__tag {
     font-size: 1.5rem;
   }
 
-  h2 {
-    font-size: 6rem;
+  .main__bg {
+    background: url('../images/rhino-small.png') no-repeat;
+    background-position: right bottom;
+    background-attachment: fixed;
+    background-size: cover;
+    min-width: 351px;
   }
 
-  .logo h1 {
-    padding-right: 0.75rem;
+  .container__logo {
+    background: url('../images/rhino-small.png');
+    background-position: right bottom;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+
+  h2 {
+    font-size: 6rem;
   }
 
   .container__logo:before {
@@ -364,6 +367,10 @@ p.contact__tag {
 
   .logo {
     padding-left: 2rem;
+  }
+
+  .logo h1 {
+    padding-right: 0.75rem;
   }
 
   .container__content {
@@ -375,17 +382,9 @@ p.contact__tag {
     padding: 7.2rem 1.5rem;
   }
 
-  .section__content:last-of-type {
-    padding-bottom: 60rem;
-  }
-
   nav {
     width: 100%;
     padding: 0 2rem;
-  }
-
-  .slide:last-child {
-    padding-right: 5rem;
   }
 
   .darken-bg {
@@ -393,7 +392,7 @@ p.contact__tag {
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 650px) {
   nav {
     height: 91.5vh;
     background: #171414;
@@ -423,6 +422,10 @@ p.contact__tag {
     background-color: rgba(0, 0, 0, 0.475);
   }
 
+  .slide {
+    padding: 1rem;
+  }
+
   .darken-bg {
     background-color: rgba(0, 0, 0, 0.53);
   }
@@ -436,5 +439,16 @@ p.contact__tag {
 
   .container__logo:before {
     margin-bottom: -3rem;
+  }
+
+  .icon--tech {
+    height: 5rem;
+    width: 5rem;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  nav {
+    top: 103vh;
   }
 }
