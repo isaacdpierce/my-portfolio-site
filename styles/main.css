@@ -85,6 +85,7 @@ cite {
 nav {
   background: #1d1a19;
   height: 91.5vh;
+  position: -webkit-sticky; /* Safari */
   position: sticky;
   top: 94vh;
   z-index: 99;
