@@ -108,7 +108,7 @@ nav {
 
 .main__bg {
   background: url('../images/rhino.png') no-repeat;
-  background-position: right bottom;
+  background-position: right top;
   background-attachment: fixed;
   background-size: cover;
 }
