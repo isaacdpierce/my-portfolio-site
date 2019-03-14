@@ -99,7 +99,7 @@ nav {
 }
 
 .main__bg {
-  background: url('../images/rhino.png') no-repeat;
+  background: rgb(26, 24, 23) url('../images/rhino.png') no-repeat;
   background-position: right;
   background-attachment: fixed;
   background-size: cover;
