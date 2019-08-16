@@ -79,18 +79,17 @@ cite {
 }
 
 nav {
+  align-items: center;
   background: #1d1a19;
-  height: 91.5vh;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 94vh;
-  z-index: 99;
-
   display: flex;
   flex-direction: column;
+  height: 86.5vh;
   justify-content: flex-start;
-  align-items: center;
+  position: -webkit-sticky;
+  position: sticky;
   text-align: center;
+  top: 94vh;
+  z-index: 99;
 }
 
 .main__grid {
@@ -107,13 +106,12 @@ nav {
 
 .container__logo {
   background: url('../images/rhino.png');
-  background-position: right bottom;
+  background-position: right;
   background-attachment: fixed;
   background-size: cover;
-
   padding-bottom: 1rem;
   position: sticky;
-  top: -43vh;
+  top: -39vh;
   z-index: 99;
 }
 
@@ -165,6 +163,14 @@ nav {
 
 .section__content:not(:last-child) {
   transform: translateY(-20rem);
+}
+
+.goals {
+  padding-bottom: 2rem;
+}
+
+.interests {
+  margin-bottom: 80vh;
 }
 
 .conduct h3 {
@@ -279,11 +285,7 @@ p.contact__tag {
   background-color: #5c5149;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.527);
   border-radius: 2px;
-  padding-left: 1rem;
-}
-
-.section__content--last {
-  margin-bottom: 100vh;
+  padding-left: -10rem;
 }
 
 @media only screen and (max-width: 1300px) {
@@ -322,7 +324,8 @@ p.contact__tag {
     font-size: 6rem;
   }
 
-  .container__logo:before {
+  .container__logo:before,
+  .container__content {
     background-color: rgba(0, 0, 0, 0.201);
   }
 
@@ -336,7 +339,6 @@ p.contact__tag {
 
   .container__content {
     grid-column: 1 / 13;
-    background-color: rgba(0, 0, 0, 0.201);
   }
 
   .section__content {
@@ -355,7 +357,7 @@ p.contact__tag {
 
 @media only screen and (max-width: 650px) {
   nav {
-    height: 91.5vh;
+    height: 87.5vh;
     background: #171414;
   }
 
@@ -369,18 +371,20 @@ p.contact__tag {
     letter-spacing: 4px;
   }
 
-  .container__logo:before {
-    margin-bottom: -2.9rem;
+  .container__logo:before,
+  .container__content {
     background-color: rgba(0, 0, 0, 0.475);
   }
-
-  .section__content {
-    width: 100%;
+  .container__logo:before {
+    margin-bottom: -2.9rem;
   }
 
   .container__content {
     color: white;
-    background-color: rgba(0, 0, 0, 0.475);
+  }
+
+  .section__content {
+    width: 100%;
   }
 
   .slide {
