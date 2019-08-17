@@ -207,6 +207,7 @@ p.contact__tag {
 
 .question {
   width: 100%;
+  margin: 0;
   padding: 5rem 6rem;
   border-radius: 5px;
   text-align: center;
@@ -223,7 +224,7 @@ p.contact__tag {
   background: rgb(49, 49, 49);
   border-radius: 5px;
   height: 100%;
-  width: 100%;
+  width: 95%;
 }
 
 .question h3 {
